@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="220dp"
+    android:layout_height="220dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardUseCompatPadding="true"
+    android:layout_marginEnd="10dp"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/round">
+
+        <TextView
+            android:id="@+id/textViewData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14 Jul"
+            android:padding="5dp"
+            android:textColor="?attr/colorSecondaryVariant"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewFirma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KingdomSta..."
+            android:padding="5dp"
+            android:textColor="?attr/colorSecondaryVariant"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/imageViewAvatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            tools:background="@tools:sample/avatars"
+            app:layout_constraintTop_toBottomOf="@id/textViewData"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D Ecosystem"
+            android:paddingStart="7dp"
+            android:textColor="?attr/colorSecondaryVariant"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/textViewData"
+            app:layout_constraintStart_toEndOf="@id/imageViewAvatar"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewRaise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Raised"
+            android:padding="5dp"
+            android:textColor="?attr/colorSecondaryVariant"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewRaiseResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$50.00K"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="?attr/colorSecondaryVariant"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewInvestors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Investors"
+            android:padding="5dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="?attr/colorSecondaryVariant"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/textViewRaise"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="220dp"
+    android:layout_height="220dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginEnd="10dp"
+    app:cardUseCompatPadding="true"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/token">
+
+        <TextView
+            android:id="@+id/textViewData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14 Jul"
+            android:padding="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewFirma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KingdomSta..."
+            android:padding="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/imageViewAvatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            tools:background="@tools:sample/avatars"
+            app:layout_constraintTop_toBottomOf="@id/textViewData"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D Ecosystem"
+            android:paddingStart="7dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/textViewData"
+            app:layout_constraintStart_toEndOf="@id/imageViewAvatar"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DCX"
+            android:paddingStart="7dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+            app:layout_constraintStart_toEndOf="@id/imageViewAvatar"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/textViewRaise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Raise"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewRaiseResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$50.00K"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/textViewRaise"
+            app:layout_constraintTop_toBottomOf="@id/textViewText"/>
+
+        <TextView
+            android:id="@+id/textViewCategoryResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blockchai..."
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/textViewRaise"
+            app:layout_constraintTop_toBottomOf="@id/textViewText"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

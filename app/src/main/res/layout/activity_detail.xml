@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Coins">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:paddingStart="5dp"
+                android:src="@drawable/back"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imageViewCrypto"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/back"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/back"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BTC"
+                android:textColor="?attr/colorSecondaryVariant"
+                android:textSize="28sp"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageViewCrypto"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/textViewId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#1"
+                android:textColor="?attr/colorSecondaryVariant"
+                android:textSize="28sp"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textViewName"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imageViewLoad"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/load"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imageViewStar"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/star1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/imageViewLoad"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imageViewBell"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/bell1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/imageViewStar"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lay1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lay2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/colorSecondaryVariant"
+                android:text="Bitcoin"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:textSize="20sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lay3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewTitle">
+
+                <TextView
+                    android:id="@+id/textViewCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/colorSecondaryVariant"
+                    android:text="$30,218"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                <TextView
+                    android:id="@+id/textViewProc"
+                    android:layout_width="95dp"
+                    android:layout_height="40dp"
+                    android:text="-0.13%"
+                    android:layout_marginEnd="14dp"
+                    android:textSize="24sp"
+                    android:textColor="@color/red"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:background="@drawable/red_cons"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imageViewGraf"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:layout_constraintTop_toBottomOf="@id/lay3"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="8dp"
+                app:cardElevation="20dp"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintTop_toBottomOf="@id/imageViewGraf">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp">
+
+                <TextView
+                    android:id="@+id/textViewMarket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/colorSecondaryVariant"
+                    android:text="Token Sales IDO, ICO"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewSee"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textColor="?attr/colorSecondary"
+                    android:text="See All >"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/gray"
+                        app:layout_constraintTop_toBottomOf="@id/textViewSee"/>
+
+                    <TextView
+                        android:id="@+id/textViewMarketCap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/gray"
+                        android:text="Market Cap"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toBottomOf="@id/view1"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/textViewMarketCapResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textStyle="bold"
+                        android:text="$30,381"
+                        android:textSize="18sp"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintTop_toBottomOf="@id/view1"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/gray"
+                        app:layout_constraintTop_toBottomOf="@id/textViewMarketCap"/>
+
+                    <TextView
+                        android:id="@+id/textViewSupply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/gray"
+                        android:text="Circulating Supply"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toBottomOf="@id/view2"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/textViewSupplyResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textStyle="bold"
+                        android:text="$30,381"
+                        android:textSize="18sp"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintTop_toBottomOf="@id/view2"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/gray"
+                        app:layout_constraintTop_toBottomOf="@id/textViewSupply"/>
+
+                    <TextView
+                        android:id="@+id/textViewTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/gray"
+                        android:text="Total Supply"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toBottomOf="@id/view3"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/textViewTotalResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textStyle="bold"
+                        android:text="$30,381"
+                        android:textSize="18sp"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintTop_toBottomOf="@id/view3"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/gray"
+                        app:layout_constraintTop_toBottomOf="@id/textViewTotal"/>
+
+                    <TextView
+                        android:id="@+id/textViewFully"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/gray"
+                        android:text="Fully Diluted MC"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toBottomOf="@id/view4"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/textViewFullyResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textStyle="bold"
+                        android:text="$30,381"
+                        android:textSize="18sp"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintTop_toBottomOf="@id/view4"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/gray"
+                        app:layout_constraintTop_toBottomOf="@id/textViewFully"/>
+
+                    <TextView
+                        android:id="@+id/textViewVolume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/gray"
+                        android:text="Volume (24h)"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toBottomOf="@id/view5"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/textViewVolumeResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textStyle="bold"
+                        android:text="$30,381"
+                        android:textSize="18sp"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintTop_toBottomOf="@id/view5"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <View
+                        android:id="@+id/view6"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/gray"
+                        app:layout_constraintTop_toBottomOf="@id/textViewVolume"/>
+
+                    <TextView
+                        android:id="@+id/textViewAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/gray"
+                        android:text="Volume (24h)"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toBottomOf="@id/view6"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/textViewAllResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textStyle="bold"
+                        android:text="$30,381"
+                        android:textSize="18sp"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintTop_toBottomOf="@id/view6"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
